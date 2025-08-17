@@ -9,7 +9,7 @@ To guide an AI assistant in creating a high-level Product Requirements Document 
 1. **Receive Project Description:** The user provides a high-level description of the project they want to build.
 2. **Ask Strategic Clarifying Questions:** Before writing the Project PRD, the AI *must* ask clarifying questions to understand the project scope, goals, and feature breakdown. Provide options in letter/number lists for easy selection.
 3. **Generate Project PRD:** Create a comprehensive project-level document using the structure outlined below.
-4. **Save Project PRD:** Save the generated document as `project-prd-[project-name].md` inside the `/tasks` directory.
+4. **Save Project PRD:** Save the generated document as `000_PPRD|[project-name].md` inside the `!xcc/prds/` directory.
 
 ## Strategic Clarifying Questions (Examples)
 
@@ -17,41 +17,47 @@ The AI should adapt questions based on the project description, focusing on high
 
 * **Project Scope:** "What is the primary scope of this project?"
   - A) MVP/Proof of concept
-  - B) Full-featured application
-  - C) Enterprise-level system
-  - D) Research/experimental project
+  - B) 🔍 **Research First:** Use `/mcp ref search "MVP vs full application development timeline"` to research project scoping strategies before deciding
+  - C) Full-featured application
+  - D) Enterprise-level system
+  - E) Research/experimental project
 
 * **Target Users:** "Who are the primary users of this system?"
   - A) End consumers (B2C)
-  - B) Business users (B2B)
-  - C) Internal team/organization
-  - D) Developers/technical users
-  - E) Mixed user base
+  - B) 🔍 **Research First:** Use `/mcp ref search "[industry] user persona development methods"` to research user identification strategies
+  - C) Business users (B2B)
+  - D) Internal team/organization
+  - E) Developers/technical users
+  - F) Mixed user base
 
 * **Project Timeline:** "What is the expected development timeline?"
   - A) Rapid prototype (weeks)
-  - B) Standard development (months)
-  - C) Long-term project (6+ months)
-  - D) Ongoing/iterative development
+  - B) 🔍 **Research First:** Use `/mcp ref search "[project type] development timeline estimation"` to research realistic timelines
+  - C) Standard development (months)
+  - D) Long-term project (6+ months)
+  - E) Ongoing/iterative development
 
 * **Success Criteria:** "How will project success be measured?"
   - A) User adoption metrics
-  - B) Business revenue/ROI
-  - C) Technical performance metrics
-  - D) User satisfaction/feedback
-  - E) Internal efficiency gains
+  - B) 🔍 **Research First:** Use `/mcp ref search "[project type] success metrics KPI frameworks"` to research measurement strategies
+  - C) Business revenue/ROI
+  - D) Technical performance metrics
+  - E) User satisfaction/feedback
+  - F) Internal efficiency gains
 
 * **Integration Requirements:** "Does this project need to integrate with existing systems?"
   - A) Standalone system
-  - B) Replace existing system
-  - C) Integrate with current tools
-  - D) Part of larger ecosystem
+  - B) 🔍 **Research First:** Use `/mcp ref search "[technology] system integration patterns"` to research integration approaches
+  - C) Replace existing system
+  - D) Integrate with current tools
+  - E) Part of larger ecosystem
 
 * **Scalability Expectations:** "What are the expected scale requirements?"
   - A) Small user base (<1000 users)
-  - B) Medium scale (1000-10000 users)
-  - C) Large scale (10000+ users)
-  - D) Unknown/variable scale
+  - B) 🔍 **Research First:** Use `/mcp ref search "[project type] scalability planning"` to research scaling considerations
+  - C) Medium scale (1000-10000 users)
+  - D) Large scale (10000+ users)
+  - E) Unknown/variable scale
 
 ## Project PRD Structure
 
@@ -154,8 +160,38 @@ The Project PRD should be understandable by:
 ## Output
 
 * **Format:** Markdown (`.md`)
-* **Location:** `/tasks/`
-* **Filename:** `project-prd-[project-name].md`
+* **Location:** `!xcc/prds/`
+* **Filename:** `000_PPRD|[project-name].md`
+
+## Research Integration
+
+When users select research options (B), provide:
+
+1. **Acknowledge the research choice:**
+   ```
+   Great choice! Researching this topic will help ensure we make informed decisions. 
+   Here's the specific research I recommend:
+   ```
+
+2. **Provide the exact MCP command:**
+   ```
+   /mcp ref search "[context-specific query based on user's project]"
+   ```
+
+3. **Suggest research focus areas:**
+   ```
+   While researching, pay particular attention to:
+   - [Specific aspect 1 relevant to their project]
+   - [Specific aspect 2 relevant to their project]
+   - [Industry-specific considerations]
+   ```
+
+4. **Resume framework:**
+   ```
+   After you've reviewed the research results, share the key insights you found and 
+   I'll help you apply them to your specific project context. Then we can proceed 
+   with the informed decision.
+   ```
 
 ## Final Instructions
 
@@ -164,3 +200,4 @@ The Project PRD should be understandable by:
 3. Ask clarifying questions to understand the project vision and scope
 4. Create a comprehensive project foundation that will guide all subsequent development work
 5. Ensure the feature breakdown provides clear guidance for the next phase of detailed feature PRD creation
+6. When research options are selected, provide specific MCP commands tailored to the user's project context
