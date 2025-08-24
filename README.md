@@ -37,7 +37,7 @@ Automated session management and context preservation:
 
 ### 1. Clone the Template
 ```bash
-git clone https://github.com/Onegaishmas/xcc_lattice.git
+git clone https://github.com/Onegaishimas/xcc_lattice.git
 ```
 
 ### 2. Remove Template Git History
