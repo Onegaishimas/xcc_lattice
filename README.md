@@ -13,7 +13,7 @@
 ## Enhanced Features
 
 ### 🗂️ Organized Structure
-All framework files are now organized under the `!xcc/` directory, providing:
+All framework files are now organized under the `0xcc/` directory, providing:
 - **Clean separation** between framework and project files
 - **Easy navigation** with `!` prefix sorting to top of file explorer
 - **Portable framework** that can be easily updated or copied
@@ -53,18 +53,18 @@ cd your-project-name
 
 ### 4. Initialize XCC Framework
 ```bash
-# Create complete !xcc framework structure
-mkdir -p !xcc/adrs !xcc/docs !xcc/instruct !xcc/prds !xcc/tasks !xcc/tdds !xcc/tids
-mkdir -p !xcc/transcripts !xcc/checkpoints !xcc/scripts
+# Create complete 0xcc framework structure
+mkdir -p 0xcc/adrs 0xcc/docs 0xcc/instruct 0xcc/prds 0xcc/tasks 0xcc/tdds 0xcc/tids
+mkdir -p 0xcc/transcripts 0xcc/checkpoints 0xcc/scripts
 
 # Initialize session state
-echo '{"sessionNumber": 0, "currentPhase": "setup", "totalSessionTime": "0 hours"}' > !xcc/session_state.json
+echo '{"sessionNumber": 0, "currentPhase": "setup", "totalSessionTime": "0 hours"}' > 0xcc/session_state.json
 
 # Initialize research context
-echo '{"projectContext": {}, "researchHistory": [], "researchPatterns": {}}' > !xcc/research_context.json
+echo '{"projectContext": {}, "researchHistory": [], "researchPatterns": {}}' > 0xcc/research_context.json
 
 # Optional: Add transcripts to .gitignore if you want to keep them private
-echo "!xcc/transcripts/" >> .gitignore
+echo "0xcc/transcripts/" >> .gitignore
 ```
 
 ### 5. Create New GitHub Repository
@@ -79,7 +79,7 @@ echo "!xcc/transcripts/" >> .gitignore
 ```bash
 git init
 git add .
-git commit -m "Initial commit: XCC Framework with !xcc organization and enhanced housekeeping"
+git commit -m "Initial commit: XCC Framework with 0xcc organization and enhanced housekeeping"
 git branch -M main
 ```
 
@@ -145,7 +145,7 @@ code .
 # In Claude Code chat:
 @CLAUDE.md
 
-@!xcc/instruct/001_create-project-prd.md
+@0xcc/instruct/001_create-project-prd.md
 
 I want to build [describe your project idea in detail]
 
@@ -188,16 +188,16 @@ Select this option to get:
 ```bash
 # Standard session start sequence
 @CLAUDE.md
-@!xcc/session_state.json
+@0xcc/session_state.json
 
 # Load current work area based on phase
-@!xcc/prds/     # For PRD work
-@!xcc/tdds/     # For TDD work
-@!xcc/tids/     # For TID work  
-@!xcc/tasks/    # For task execution
+@0xcc/prds/     # For PRD work
+@0xcc/tdds/     # For TDD work
+@0xcc/tids/     # For TID work  
+@0xcc/tasks/    # For task execution
 
 # Research context when needed
-@!xcc/research_context.json
+@0xcc/research_context.json
 ```
 
 ---
@@ -207,49 +207,49 @@ Select this option to get:
 ### Phase 1: Project Foundation
 ```bash
 # Session 1: Project Vision with Research Support
-@!xcc/instruct/001_create-project-prd.md
+@0xcc/instruct/001_create-project-prd.md
 # Use research options to inform project scope and user decisions
-# Output: !xcc/prds/000_PPRD|[project-name].md
+# Output: 0xcc/prds/000_PPRD|[project-name].md
 
 # Session 2: Technical Foundation with Research
-@!xcc/instruct/002_create-adr.md
-@!xcc/prds/000_PPRD|[project-name].md
+@0xcc/instruct/002_create-adr.md
+@0xcc/prds/000_PPRD|[project-name].md
 # Research technology choices before making architectural decisions
-# Output: !xcc/adrs/000_PADR|[project-name].md
+# Output: 0xcc/adrs/000_PADR|[project-name].md
 # Action: Copy Project Standards section to CLAUDE.md
 ```
 
 ### Phase 2: Feature Development (For each feature)
 ```bash
 # Feature Requirements with Research Support
-@!xcc/instruct/003_create-feature-prd.md
-@!xcc/prds/000_PPRD|[project-name].md
-@!xcc/adrs/000_PADR|[project-name].md
+@0xcc/instruct/003_create-feature-prd.md
+@0xcc/prds/000_PPRD|[project-name].md
+@0xcc/adrs/000_PADR|[project-name].md
 # Research feature patterns, user stories, and security requirements
-# Output: !xcc/prds/[###]_FPRD|[feature-name].md
+# Output: 0xcc/prds/[###]_FPRD|[feature-name].md
 
 # Technical Design with Architecture Research
-@!xcc/instruct/004_create-tdd.md  
-@!xcc/prds/[###]_FPRD|[feature-name].md
+@0xcc/instruct/004_create-tdd.md  
+@0xcc/prds/[###]_FPRD|[feature-name].md
 # Research architecture patterns, data design, and component organization
-# Output: !xcc/tdds/[###]_FTDD|[feature-name].md
+# Output: 0xcc/tdds/[###]_FTDD|[feature-name].md
 
 # Implementation Planning with Best Practices Research
-@!xcc/instruct/005_create-tid.md
-@!xcc/prds/[###]_FPRD|[feature-name].md
-@!xcc/tdds/[###]_FTDD|[feature-name].md
+@0xcc/instruct/005_create-tid.md
+@0xcc/prds/[###]_FPRD|[feature-name].md
+@0xcc/tdds/[###]_FTDD|[feature-name].md
 # Research implementation patterns, coding standards, and optimization strategies
-# Output: !xcc/tids/[###]_FTID|[feature-name].md
+# Output: 0xcc/tids/[###]_FTID|[feature-name].md
 
 # Task Generation with Planning Research
-@!xcc/instruct/006_generate-tasks.md
-@!xcc/prds/[###]_FPRD|[feature-name].md
+@0xcc/instruct/006_generate-tasks.md
+@0xcc/prds/[###]_FPRD|[feature-name].md
 # Optional: Reference TDD and TID for enhanced context
-# Output: !xcc/tasks/[###]_FTASKS|[feature-name].md
+# Output: 0xcc/tasks/[###]_FTASKS|[feature-name].md
 
 # Implementation with Progress Tracking
-@!xcc/instruct/007_process-task-list.md
-@!xcc/tasks/[###]_FTASKS|[feature-name].md
+@0xcc/instruct/007_process-task-list.md
+@0xcc/tasks/[###]_FTASKS|[feature-name].md
 # Execute tasks with automatic progress tracking and checkpointing
 ```
 
@@ -260,7 +260,7 @@ Select this option to get:
 ### Enhanced Project Structure
 ```
 your-project-name/
-├── !xcc/                           # XCC Framework (sorts to top)
+├── 0xcc/                           # XCC Framework (sorts to top)
 │   ├── adrs/                       # Architecture Decision Records
 │   │   └── 000_PADR|Project_Name.md
 │   ├── docs/                       # Additional framework documentation
@@ -304,7 +304,7 @@ your-project-name/
 ### Key Benefits
 
 #### 🗂️ **Clean Organization**
-- **Framework isolation:** All XCC files in `!xcc/` directory
+- **Framework isolation:** All XCC files in `0xcc/` directory
 - **Easy navigation:** `!` prefix sorts framework to top in file explorers
 - **Clear boundaries:** Framework vs project code separation
 - **Portable updates:** Framework can be updated independently
@@ -339,7 +339,7 @@ your-project-name/
 "Please help me resume where I left off"
 
 # Claude will automatically:
-# - Check !xcc/session_state.json for last position
+# - Check 0xcc/session_state.json for last position
 # - Load current document context  
 # - Show progress and next actions
 # - Present any blockers or research findings
@@ -363,7 +363,7 @@ your-project-name/
 "Please create a checkpoint before I take a break"
 
 # Claude will:
-# - Update !xcc/session_state.json with current progress
+# - Update 0xcc/session_state.json with current progress
 # - Save transcript with key decisions and research findings
 # - Commit progress with structured message including research context
 # - Provide specific resume commands for next session
@@ -417,8 +417,8 @@ The framework captures and leverages research throughout development:
 - **Decision transparency** for stakeholders and team alignment
 
 ### Framework Portability
-- **Easy updates:** Replace `!xcc/` directory to update framework
-- **Project templates:** Copy `!xcc/` structure to new projects
+- **Easy updates:** Replace `0xcc/` directory to update framework
+- **Project templates:** Copy `0xcc/` structure to new projects
 - **Custom extensions:** Add organization-specific instructions
 - **Version control:** Track framework evolution separately from project code
 
@@ -430,9 +430,9 @@ The framework captures and leverages research throughout development:
 ```bash
 # Emergency context recovery
 @CLAUDE.md
-@!xcc/session_state.json
-@!xcc/prds/000_PPRD|[project-name].md
-@!xcc/adrs/000_PADR|[project-name].md
+@0xcc/session_state.json
+@0xcc/prds/000_PPRD|[project-name].md
+@0xcc/adrs/000_PADR|[project-name].md
 
 # Then ask: "Please help me understand where I am in the workflow"
 ```
@@ -441,7 +441,7 @@ The framework captures and leverages research throughout development:
 ```bash
 # Manual session state recreation
 @CLAUDE.md
-@!xcc/research_context.json
+@0xcc/research_context.json
 git log --oneline -10
 
 # Ask: "Please help me recreate the session state based on recent commits and research history"
@@ -471,39 +471,39 @@ npm install -g @modelcontextprotocol/server-ref
 
 ## Migration from Old Structure
 
-If you have an existing XCC project without the `!xcc/` structure:
+If you have an existing XCC project without the `0xcc/` structure:
 
 ### Quick Migration Script
 ```bash
 #!/bin/bash
-echo "Migrating XCC framework to !xcc directory..."
+echo "Migrating XCC framework to 0xcc directory..."
 
 # Create new structure
-mkdir -p !xcc
+mkdir -p 0xcc
 
 # Move existing directories
-[ -d "adrs" ] && mv adrs !xcc/
-[ -d "docs" ] && mv docs !xcc/
-[ -d "instruct" ] && mv instruct !xcc/
-[ -d "prds" ] && mv prds !xcc/
-[ -d "tasks" ] && mv tasks !xcc/
-[ -d "tdds" ] && mv tdds !xcc/
-[ -d "tids" ] && mv tids !xcc/
+[ -d "adrs" ] && mv adrs 0xcc/
+[ -d "docs" ] && mv docs 0xcc/
+[ -d "instruct" ] && mv instruct 0xcc/
+[ -d "prds" ] && mv prds 0xcc/
+[ -d "tasks" ] && mv tasks 0xcc/
+[ -d "tdds" ] && mv tdds 0xcc/
+[ -d "tids" ] && mv tids 0xcc/
 
 # Create missing directories
-mkdir -p !xcc/transcripts !xcc/checkpoints !xcc/scripts
+mkdir -p 0xcc/transcripts 0xcc/checkpoints 0xcc/scripts
 
 # Initialize session state
-echo '{"sessionNumber": 0, "currentPhase": "migrated", "totalSessionTime": "0 hours"}' > !xcc/session_state.json
+echo '{"sessionNumber": 0, "currentPhase": "migrated", "totalSessionTime": "0 hours"}' > 0xcc/session_state.json
 
-echo "Migration complete! Update your CLAUDE.md file references to use !xcc/ paths"
+echo "Migration complete! Update your CLAUDE.md file references to use 0xcc/ paths"
 ```
 
 ### Update File References
 After migration, update your CLAUDE.md file references:
-- Change `@prds/` to `@!xcc/prds/`
-- Change `@adrs/` to `@!xcc/adrs/`
-- Update all other framework paths to include `!xcc/` prefix
+- Change `@prds/` to `@0xcc/prds/`
+- Change `@adrs/` to `@0xcc/adrs/`
+- Update all other framework paths to include `0xcc/` prefix
 
 ---
 
@@ -511,4 +511,4 @@ After migration, update your CLAUDE.md file references:
 **Enhanced Features:** Organized structure, research integration, advanced housekeeping  
 **Ready to Code:** Start with enhanced Project PRD creation!
 
-The XCC Framework now provides a more organized, research-informed, and automatically managed development experience within Claude Code and VS Code. The `!xcc/` structure ensures your framework files are organized, easily updatable, and clearly separated from your project code.
+The XCC Framework now provides a more organized, research-informed, and automatically managed development experience within Claude Code and VS Code. The `0xcc/` structure ensures your framework files are organized, easily updatable, and clearly separated from your project code.
