@@ -257,10 +257,10 @@ Select this option to get:
 
 ## What You Get
 
-### Enhanced Project Structure
+### Enhanced XCC Lattice Project Structure
 ```
 your-project-name/
-├── 0xcc/                           # XCC Framework (sorts to top)
+├── 0xcc/                           # Core XCC Framework
 │   ├── adrs/                       # Architecture Decision Records
 │   │   └── 000_PADR|Project_Name.md
 │   ├── docs/                       # Additional framework documentation
@@ -272,8 +272,7 @@ your-project-name/
 │   │   ├── 004_create-tdd.md
 │   │   ├── 005_create-tid.md
 │   │   ├── 006_generate-tasks.md
-│   │   ├── 007_process-task-list.md
-│   │   └── 008_housekeeping.md
+│   │   └── 007_process-task-list.md
 │   ├── prds/                       # Product Requirements Documents
 │   │   ├── 000_PPRD|Project_Name.md
 │   │   ├── 001_FPRD|Feature_A.md
@@ -294,7 +293,38 @@ your-project-name/
 │   ├── scripts/                    # Optional automation scripts
 │   ├── session_state.json          # Current session tracking
 │   └── research_context.json       # Research history and context
-├── CLAUDE.md                       # Project memory system
+├── .claude/                        # Claude Extensions System
+│   ├── commands/                   # Command definitions
+│   │   ├── analyze.md              # /analyze command
+│   │   ├── collaborate.md          # /collaborate command
+│   │   ├── feature.md              # /feature command
+│   │   ├── health.md               # /health command
+│   │   ├── review.md               # /review command
+│   │   └── smart-clear.md          # /smart-clear command
+│   ├── context/                    # Context management
+│   │   ├── agents/                 # Expert agent contexts
+│   │   │   ├── product_engineer.md
+│   │   │   ├── qa_engineer.md
+│   │   │   ├── architect.md
+│   │   │   └── test_engineer.md
+│   │   ├── health/                 # Health monitoring
+│   │   │   ├── dashboard.md
+│   │   │   └── assessment_template.md
+│   │   ├── project/                # Project information
+│   │   │   ├── health_summary.md
+│   │   │   └── setup_info.md
+│   │   └── sessions/               # Session tracking
+│   │       └── session_template.md
+│   ├── prompts/                    # Analysis templates
+│   │   ├── analysis/               # Expert analysis prompts
+│   │   │   ├── architecture/       # Architecture assessment
+│   │   │   ├── integration/        # Integration review
+│   │   │   ├── product/            # Product context analysis
+│   │   │   ├── quality/            # Code quality review
+│   │   │   └── testing/            # Testing strategy analysis
+│   │   └── usage_guide.md          # Analysis templates guide
+│   └── quick_reference.md          # Extensions usage guide
+├── CLAUDE.md                       # Enhanced project memory system
 ├── src/                            # Your actual project code
 ├── tests/                          # Your project tests
 ├── package.json                    # Your project dependencies (if applicable)

@@ -13,8 +13,8 @@
 "Please help me resume where I left off"
 # Or manual if needed:
 @CLAUDE.md
-@!xcc/session_state.json
-ls -la !xcc/*/
+@0xcc/session_state.json
+ls -la 0xcc/*/
 
 # Research integration (when ref MCP server available)
 # Format: "Use /mcp ref search '[context-specific search term]'"
@@ -151,15 +151,15 @@ git commit -m "docs: completed [task] - Next: [specific action]"
 ```bash
 # Mild context loss
 @CLAUDE.md
-@!xcc/session_state.json
-ls -la !xcc/*/
+@0xcc/session_state.json
+ls -la 0xcc/*/
 @!xcc/instruct/[current-phase].md
 
 # Severe context loss  
 @CLAUDE.md
 @!xcc/prds/000_PPRD|[project-name].md
 @!xcc/adrs/000_PADR|[project-name].md
-ls -la !xcc/*/
+ls -la 0xcc/*/
 @!xcc/instruct/
 ```
 
@@ -169,7 +169,7 @@ ls -la !xcc/*/
 "Please help me resume where I left off"
 # Or manual if needed:
 @CLAUDE.md
-@!xcc/session_state.json
+@0xcc/session_state.json
 @[specific-file-currently-working-on]
 # Specific next action: [detailed action]
 ```
