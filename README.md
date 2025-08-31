@@ -10,26 +10,26 @@
 
 ---
 
-## Enhanced Features
+## Features
 
 ### 🗂️ Organized Structure
-All framework files are now organized under the `0xcc/` directory, providing:
-- **Clean separation** between framework and project files
-- **Easy navigation** with `!` prefix sorting to top of file explorer
-- **Portable framework** that can be easily updated or copied
+All framework files are organized under the `0xcc/` directory:
+- Separation between framework and project files
+- Navigation with `0` prefix sorting to top of file explorer
+- Portable framework structure
 
 ### 🔍 Research Integration
-The framework includes contextual research suggestions in all decision points via MCP server integration:
-- **Context-aware research queries** tailored to your project phase
-- **Seamless workflow integration** using `/mcp ref search` commands
-- **Informed decision making** without breaking your development flow
+The framework includes contextual research suggestions via MCP server integration:
+- Context-aware research queries tailored to your project phase
+- Workflow integration using `/mcp ref search` commands
+- Decision making support
 
-### 🏠 Advanced Housekeeping
+### 🏠 Session Management
 Automated session management and context preservation:
-- **Smart session tracking** with automatic state preservation
-- **Context cleanup** when conversations get too large
-- **Transcript capture** for learning and team collaboration
-- **Intelligent resumption** that knows exactly where you left off
+- Session tracking with state preservation
+- Context cleanup when conversations get too large
+- Transcript capture for learning and team collaboration
+- Session resumption
 
 ---
 
@@ -79,7 +79,7 @@ echo "0xcc/transcripts/" >> .gitignore
 ```bash
 git init
 git add .
-git commit -m "Initial commit: XCC Framework with 0xcc organization and enhanced housekeeping"
+git commit -m "Initial commit: XCC Framework with 0xcc organization"
 git branch -M main
 ```
 
@@ -202,7 +202,7 @@ Select this option to get:
 
 ---
 
-## Enhanced Workflow Process
+## Workflow Process
 
 ### Phase 1: Project Foundation
 ```bash
@@ -257,7 +257,7 @@ Select this option to get:
 
 ## What You Get
 
-### Enhanced XCC Lattice Project Structure
+### XCC Lattice Project Structure
 ```
 your-project-name/
 ├── 0xcc/                           # Core XCC Framework
@@ -333,30 +333,30 @@ your-project-name/
 
 ### Key Benefits
 
-#### 🗂️ **Clean Organization**
-- **Framework isolation:** All XCC files in `0xcc/` directory
-- **Easy navigation:** `!` prefix sorts framework to top in file explorers
-- **Clear boundaries:** Framework vs project code separation
-- **Portable updates:** Framework can be updated independently
+#### 🗂️ **Organization**
+- Framework isolation: All XCC files in `0xcc/` directory
+- Navigation: `0` prefix sorts framework to top in file explorers
+- Clear boundaries: Framework vs project code separation
+- Portable updates: Framework can be updated independently
 
-#### 🔍 **Research-Informed Development**
-- **Contextual research suggestions** for every major decision point
-- **MCP integration** for seamless research without workflow interruption
-- **Research tracking** in session transcripts and context
-- **Informed decision making** with current best practices and data
+#### 🔍 **Research Integration**
+- Contextual research suggestions for major decision points
+- MCP integration for research without workflow interruption
+- Research tracking in session transcripts and context
+- Decision making with current best practices and data
 
-#### 🏠 **Advanced Session Management**  
-- **Automatic state tracking** with comprehensive progress monitoring
-- **Smart context cleanup** when conversations get too large
-- **Transcript capture** for learning, team collaboration, and knowledge transfer
-- **Intelligent resumption** that preserves research findings and decision context
-- **Progress analytics** across sessions and development phases
+#### 🏠 **Session Management**  
+- Automatic state tracking with progress monitoring
+- Context cleanup when conversations get too large
+- Transcript capture for learning, team collaboration, and knowledge transfer
+- Session resumption that preserves research findings and decision context
+- Progress analytics across sessions and development phases
 
-#### 📊 **Enhanced Productivity**
-- **Time tracking** across sessions with realistic estimation improvements
-- **Decision consistency** through documented research and standards
-- **Reduced context switching** with integrated research capabilities
-- **Team collaboration** through comprehensive session documentation
+#### 📊 **Productivity Features**
+- Time tracking across sessions with estimation improvements
+- Decision consistency through documented research and standards
+- Reduced context switching with integrated research capabilities
+- Team collaboration through comprehensive session documentation
 
 ---
 
@@ -368,7 +368,7 @@ your-project-name/
 @CLAUDE.md
 "Please help me resume where I left off"
 
-# Claude will automatically:
+# Claude will:
 # - Check 0xcc/session_state.json for last position
 # - Load current document context  
 # - Show progress and next actions
@@ -376,7 +376,7 @@ your-project-name/
 # - Provide specific resume guidance
 ```
 
-### Making Research-Informed Decisions
+### Research Integration
 ```bash
 # When you see research options in the workflow:
 "I'll choose option B to research this topic first"
@@ -425,32 +425,32 @@ your-project-name/
 
 ---
 
-## Advanced Features
+## Additional Features
 
-### Research-Informed Development
+### Research Integration
 The framework captures and leverages research throughout development:
-- **Decision tracking** with research basis and confidence levels
-- **Pattern recognition** from research queries across projects
-- **Knowledge accumulation** for improved future decision making
-- **Team knowledge sharing** through research documentation
+- Decision tracking with research basis and confidence levels
+- Pattern recognition from research queries across projects
+- Knowledge accumulation for future decision making
+- Team knowledge sharing through research documentation
 
 ### Session Analytics and Learning
-- **Time estimation** improvements based on actual session data
-- **Decision quality** metrics correlating research with successful outcomes
-- **Process optimization** from transcript analysis and pattern recognition
-- **Framework evolution** based on real usage patterns and feedback
+- Time estimation improvements based on actual session data
+- Decision quality metrics correlating research with outcomes
+- Process optimization from transcript analysis and pattern recognition
+- Framework evolution based on usage patterns and feedback
 
 ### Team Collaboration
-- **Context handoffs** with complete research and decision history
-- **Knowledge preservation** that survives team changes and project pauses
-- **Onboarding acceleration** through comprehensive project documentation
-- **Decision transparency** for stakeholders and team alignment
+- Context handoffs with complete research and decision history
+- Knowledge preservation across team changes and project pauses
+- Onboarding acceleration through comprehensive project documentation
+- Decision transparency for stakeholders and team alignment
 
 ### Framework Portability
-- **Easy updates:** Replace `0xcc/` directory to update framework
-- **Project templates:** Copy `0xcc/` structure to new projects
-- **Custom extensions:** Add organization-specific instructions
-- **Version control:** Track framework evolution separately from project code
+- Easy updates: Replace `0xcc/` directory to update framework
+- Project templates: Copy `0xcc/` structure to new projects
+- Custom extensions: Add organization-specific instructions
+- Version control: Track framework evolution separately from project code
 
 ---
 
@@ -538,7 +538,7 @@ After migration, update your CLAUDE.md file references:
 ---
 
 **Setup Time:** ~5 minutes  
-**Enhanced Features:** Organized structure, research integration, advanced housekeeping  
+**Features:** Organized structure, research integration, session management  
 **Ready to Code:** Start with enhanced Project PRD creation!
 
-The XCC Framework now provides a more organized, research-informed, and automatically managed development experience within Claude Code and VS Code. The `0xcc/` structure ensures your framework files are organized, easily updatable, and clearly separated from your project code.
+The XCC Framework provides an organized, research-informed, and automatically managed development experience within Claude Code and VS Code. The `0xcc/` structure ensures framework files are organized, updatable, and separated from project code.

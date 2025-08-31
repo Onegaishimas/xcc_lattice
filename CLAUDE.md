@@ -3,31 +3,31 @@
 ## Current Status
 - **Phase:** Project Setup
 - **Last Session:** [Date] - Initial project setup and CLAUDE.md creation
-- **Next Steps:** Create Project PRD using @!xcc/instruct/001_create-project-prd.md
+- **Next Steps:** Create Project PRD using @0xcc/instruct/001_create-project-prd.md
 - **Active Document:** None (starting workflow)
 - **Current Feature:** N/A (project foundation phase)
 
 ## Quick Resume Commands
 ```bash
-# Enhanced XCC session start sequence
+# XCC session start sequence
 "Please help me resume where I left off"
 # Or manual if needed:
 @CLAUDE.md
 @0xcc/session_state.json
 ls -la 0xcc/*/
 
-# Research integration (when ref MCP server available)
+# Research integration (requires ref MCP server)
 # Format: "Use /mcp ref search '[context-specific search term]'"
 
 # Load project context (after Project PRD exists)
-@!xcc/prds/000_PPRD|[project-name].md
-@!xcc/adrs/000_PADR|[project-name].md
+@0xcc/prds/000_PPRD|[project-name].md
+@0xcc/adrs/000_PADR|[project-name].md
 
 # Load current work area based on phase
-@!xcc/prds/      # For PRD work
-@!xcc/tdds/      # For TDD work  
-@!xcc/tids/      # For TID work
-@!xcc/tasks/     # For task execution
+@0xcc/prds/      # For PRD work
+@0xcc/tdds/      # For TDD work  
+@0xcc/tids/      # For TID work
+@0xcc/tasks/     # For task execution
 ```
 
 ## Housekeeping Commands
@@ -42,46 +42,46 @@ ls -la 0xcc/*/
 ## Project Standards
 *[This section will be populated from ADR - Technology Stack, Development Standards, Architecture Principles, etc.]*
 
-**NOTE:** After creating the ADR using @!xcc/instruct/002_create-adr.md, copy the generated "Project Standards" section here to replace this placeholder.
+**NOTE:** After creating the ADR using @0xcc/instruct/002_create-adr.md, copy the generated "Project Standards" section here to replace this placeholder.
 
 ## AI Dev Tasks Framework Workflow
 
 ### Document Creation Sequence
 1. **Project Foundation**
-   - `000_PPRD|[project-name].md` → `!xcc/prds/` (Project PRD)
-   - `000_PADR|[project-name].md` → `!xcc/adrs/` (Architecture Decision Record)
+   - `000_PPRD|[project-name].md` → `0xcc/prds/` (Project PRD)
+   - `000_PADR|[project-name].md` → `0xcc/adrs/` (Architecture Decision Record)
    - Update this CLAUDE.md with Project Standards from ADR
 
 2. **Feature Development** (repeat for each feature)
-   - `[###]_FPRD|[feature-name].md` → `!xcc/prds/` (Feature PRD)
-   - `[###]_FTDD|[feature-name].md` → `!xcc/tdds/` (Technical Design Doc)
-   - `[###]_FTID|[feature-name].md` → `!xcc/tids/` (Technical Implementation Doc)
-   - `[###]_FTASKS|[feature-name].md` → `!xcc/tasks/` (Task List)
+   - `[###]_FPRD|[feature-name].md` → `0xcc/prds/` (Feature PRD)
+   - `[###]_FTDD|[feature-name].md` → `0xcc/tdds/` (Technical Design Doc)
+   - `[###]_FTID|[feature-name].md` → `0xcc/tids/` (Technical Implementation Doc)
+   - `[###]_FTASKS|[feature-name].md` → `0xcc/tasks/` (Task List)
 
 ### Instruction Documents Reference
-- `@!xcc/instruct/001_create-project-prd.md` - Creates project vision and feature breakdown
-- `@!xcc/instruct/002_create-adr.md` - Establishes tech stack and standards
-- `@!xcc/instruct/003_create-feature-prd.md` - Details individual feature requirements
-- `@!xcc/instruct/004_create-tdd.md` - Creates technical architecture and design
-- `@!xcc/instruct/005_create-tid.md` - Provides implementation guidance and coding hints
-- `@!xcc/instruct/006_generate-tasks.md` - Generates actionable development tasks
-- `@!xcc/instruct/007_process-task-list.md` - Guides task execution and progress tracking
-- `@!xcc/instruct/008_housekeeping.md` - Session management and context preservation
+- `@0xcc/instruct/001_create-project-prd.md` - Creates project vision and feature breakdown
+- `@0xcc/instruct/002_create-adr.md` - Establishes tech stack and standards
+- `@0xcc/instruct/003_create-feature-prd.md` - Details individual feature requirements
+- `@0xcc/instruct/004_create-tdd.md` - Creates technical architecture and design
+- `@0xcc/instruct/005_create-tid.md` - Provides implementation guidance and coding hints
+- `@0xcc/instruct/006_generate-tasks.md` - Generates actionable development tasks
+- `@0xcc/instruct/007_process-task-list.md` - Guides task execution and progress tracking
+- `@0xcc/instruct/008_housekeeping.md` - Session management and context preservation
 
 ## Document Inventory
 
 ### Project Level Documents
-- ❌ !xcc/prds/000_PPRD|[project-name].md (Project PRD)
-- ❌ !xcc/adrs/000_PADR|[project-name].md (Architecture Decision Record)
+- ❌ 0xcc/prds/000_PPRD|[project-name].md (Project PRD)
+- ❌ 0xcc/adrs/000_PADR|[project-name].md (Architecture Decision Record)
 
 ### Feature Documents
 *[Add as features are identified and developed]*
 
 **Example format:**
-- ❌ !xcc/prds/001_FPRD|Feature_A.md (Feature PRD)
-- ❌ !xcc/tdds/001_FTDD|Feature_A.md (Technical Design Doc)
-- ❌ !xcc/tids/001_FTID|Feature_A.md (Technical Implementation Doc)
-- ❌ !xcc/tasks/001_FTASKS|Feature_A.md (Task List)
+- ❌ 0xcc/prds/001_FPRD|Feature_A.md (Feature PRD)
+- ❌ 0xcc/tdds/001_FTDD|Feature_A.md (Technical Design Doc)
+- ❌ 0xcc/tids/001_FTID|Feature_A.md (Technical Implementation Doc)
+- ❌ 0xcc/tasks/001_FTASKS|Feature_A.md (Task List)
 
 ### Status Indicators
 - ✅ **Complete:** Document finished and reviewed
@@ -91,7 +91,7 @@ ls -la 0xcc/*/
 
 ## Housekeeping Status
 - **Last Checkpoint:** [Date/Time] - [Brief description]
-- **Last Transcript Save:** [Date/Time] - [File location in !xcc/transcripts/]
+- **Last Transcript Save:** [Date/Time] - [File location in 0xcc/transcripts/]
 - **Context Health:** Good/Moderate/Needs Cleanup
 - **Session Count:** [Number] sessions since project start
 - **Total Development Time:** [Estimated hours]
@@ -133,7 +133,7 @@ git commit -m "feat: [brief description]" -m "- [key change 1]" -m "- [key chang
 - Follow directory structure from ADR
 - Use naming conventions: `[Feature][Type].extension`
 - Import statements organized: external → internal → relative
-- Framework files in `!xcc/` directory, project files in standard locations
+- Framework files in `0xcc/` directory, project files in standard locations
 
 ## Context Management
 
@@ -153,14 +153,14 @@ git commit -m "docs: completed [task] - Next: [specific action]"
 @CLAUDE.md
 @0xcc/session_state.json
 ls -la 0xcc/*/
-@!xcc/instruct/[current-phase].md
+@0xcc/instruct/[current-phase].md
 
 # Severe context loss  
 @CLAUDE.md
-@!xcc/prds/000_PPRD|[project-name].md
-@!xcc/adrs/000_PADR|[project-name].md
+@0xcc/prds/000_PPRD|[project-name].md
+@0xcc/adrs/000_PADR|[project-name].md
 ls -la 0xcc/*/
-@!xcc/instruct/
+@0xcc/instruct/
 ```
 
 ### Resume Commands for Next Session
@@ -181,7 +181,7 @@ ls -la 0xcc/*/
 - Add newly discovered tasks as they emerge
 - Update "Relevant Files" section with any new files created/modified
 - Include one-line description for each file's purpose
-- Distinguish between framework files (!xcc/) and project files (src/, tests/, etc.)
+- Distinguish between framework files (0xcc/) and project files (src/, tests/, etc.)
 
 ### Status Indicators for Tasks
 - `[ ]` = Not started
@@ -194,7 +194,7 @@ After each development session, update:
 - Current task position in this CLAUDE.md
 - Any blockers or questions encountered
 - Next session starting point
-- Files modified in this session (both !xcc/ and project files)
+- Files modified in this session (both 0xcc/ and project files)
 
 ## Implementation Patterns
 
@@ -242,8 +242,8 @@ After each development session, update:
 
 ### Session 1: [Date] - Project Initialization
 - **Accomplished:** Created project structure, initial CLAUDE.md, began framework setup
-- **Next:** Create Project PRD using @!xcc/instruct/001_create-project-prd.md
-- **Files Created:** CLAUDE.md, !xcc/ folder structure
+- **Next:** Create Project PRD using @0xcc/instruct/001_create-project-prd.md
+- **Files Created:** CLAUDE.md, 0xcc/ folder structure
 - **Duration:** [X hours]
 
 *[Add new sessions as they occur]*
@@ -267,11 +267,11 @@ When available, the framework supports research integration via:
 
 ## Quick Reference
 
-### !xcc Folder Structure
+### 0xcc Folder Structure
 ```
 project-root/
 ├── CLAUDE.md                       # This file (project memory)
-├── !xcc/                           # XCC Framework directory
+├── 0xcc/                           # XCC Framework directory
 │   ├── adrs/                       # Architecture Decision Records
 │   ├── docs/                       # Additional documentation
 │   ├── instruct/                   # Framework instruction files
@@ -293,18 +293,18 @@ project-root/
 - **Project Level:** `000_PPRD|ProjectName.md`, `000_PADR|ProjectName.md`
 - **Feature Level:** `001_FPRD|FeatureName.md`, `001_FTDD|FeatureName.md`, etc.
 - **Sequential:** Use 001, 002, 003... for features in priority order
-- **Framework Files:** All in `!xcc/` directory for clear organization
+- **Framework Files:** All in `0xcc/` directory for clear organization
 - **Project Files:** Standard locations (src/, tests/, package.json, etc.)
 
 ### Emergency Contacts & Resources
-- **Framework Documentation:** @!xcc/instruct/000_README.md
-- **Current Project PRD:** @!xcc/prds/000_PPRD|[project-name].md (after creation)
-- **Tech Standards:** @!xcc/adrs/000_PADR|[project-name].md (after creation)
-- **Housekeeping Guide:** @!xcc/instruct/008_housekeeping.md
+- **Framework Documentation:** @0xcc/instruct/000_README.md
+- **Current Project PRD:** @0xcc/prds/000_PPRD|[project-name].md (after creation)
+- **Tech Standards:** @0xcc/adrs/000_PADR|[project-name].md (after creation)
+- **Housekeeping Guide:** @0xcc/instruct/008_housekeeping.md
 
 ---
 
-**Framework Version:** 1.1 (with !xcc organization)  
+**Framework Version:** 1.1  
 **Last Updated:** [Current Date]  
 **Project Started:** [Start Date]  
-**Structure:** !xcc framework with MCP research integration support
+**Structure:** 0xcc framework with MCP research integration
