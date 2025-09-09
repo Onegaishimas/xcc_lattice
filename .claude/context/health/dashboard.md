@@ -30,5 +30,31 @@
 - **This Week:** [Weekly goal]
 - **This Month:** [Monthly objective]
 
+## Available Analysis Commands
+
+- `/analyze product [scope]` - Requirements and business alignment
+- `/analyze quality [scope]` - Code quality and standards
+- `/analyze architecture [scope]` - System design and scalability
+- `/analyze testing [scope]` - Test coverage and strategy
+- `/analyze integration [scope]` - System integration health
+
+## Agent Contexts Integration
+
+All agent contexts ready for multi-perspective analysis:
+- **Product Engineer:** Business and requirements focus
+- **QA Engineer:** Quality and testing focus  
+- **Architect:** Design and scalability focus
+- **Test Engineer:** Testing and reliability focus
+
+### Loading for Health Assessment
+```markdown
+@.claude/context/health/dashboard.md
+@.claude/context/agents/product_engineer.md
+@.claude/context/agents/qa_engineer.md
+@.claude/context/agents/architect.md
+@.claude/context/agents/test_engineer.md
+@CLAUDE.md
+```
+
 ---
-*Update this dashboard weekly or after major changes*
+*Update this dashboard weekly or after major changes using `/health` command*

@@ -55,4 +55,30 @@
 2. 
 
 ---
-*Update this when working on system design and architecture*
+
+## Usage with Claude Code
+
+### Loading This Agent Context
+```markdown
+@.claude/context/agents/architect.md
+@CLAUDE.md
+@0xcc/adrs/000_PADR|[project-name].md
+```
+
+### Integration with Commands
+- Use with `/analyze architecture [scope]`
+- Update after major design decisions
+- Reference in technical `/review` workflows
+- Essential for system-wide `/collaborate` sessions
+
+### Agent Activation Phrase
+"Load the Architect agent context for system design and technical architecture analysis"
+
+### Best Used For
+- System design reviews
+- Technical debt assessments
+- Scalability planning
+- Integration pattern decisions
+
+---
+*Update this context when working on system design and architecture*

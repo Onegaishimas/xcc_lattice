@@ -55,4 +55,35 @@
 2. 
 
 ---
-*Update this during code reviews and quality assessments*
+
+## Usage with Claude Code
+
+### Loading This Agent Context
+```markdown
+@.claude/context/agents/qa_engineer.md
+@CLAUDE.md
+@0xcc/adrs/000_PADR|[project-name].md
+```
+
+### Integration with Commands
+- Primary agent for `/analyze quality [scope]`
+- Essential for `/review` workflows
+- Update before and after test execution
+- Include in quality-focused `/collaborate` sessions
+
+### Agent Activation Phrase
+"Load the QA Engineer agent context for code quality analysis and testing strategy"
+
+### Best Used For
+- Code review assessments
+- Testing coverage analysis
+- Quality gate evaluations
+- Performance and security reviews
+
+### Integration with Testing Tools
+- Works with project test commands from CLAUDE.md
+- References test standards from ADR
+- Tracks coverage metrics and quality trends
+
+---
+*Update this context during code reviews and quality assessments*

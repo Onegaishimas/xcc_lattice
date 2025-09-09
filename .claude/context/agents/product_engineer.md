@@ -52,4 +52,23 @@
 
 
 ---
-*Update this when working on product/requirements analysis*
+
+## Usage with Claude Code
+
+### Loading This Agent Context
+```markdown
+@.claude/context/agents/product_engineer.md
+@CLAUDE.md
+```
+
+### Integration with Commands
+- Use with `/analyze product [scope]`
+- Update after `/feature` command usage
+- Reference in `/review` workflows
+- Include in `/collaborate` sessions
+
+### Agent Activation Phrase
+"Load the Product Engineer agent context for requirements analysis"
+
+---
+*Update this context when working on product/requirements analysis*

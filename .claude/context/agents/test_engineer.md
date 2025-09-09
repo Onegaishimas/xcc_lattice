@@ -64,4 +64,43 @@
 2. 
 
 ---
-*Update this when working on testing and quality assurance*
+
+## Usage with Claude Code
+
+### Loading This Agent Context
+```markdown
+@.claude/context/agents/test_engineer.md
+@CLAUDE.md
+@0xcc/adrs/000_PADR|[project-name].md
+```
+
+### Integration with Commands
+- Primary agent for `/analyze testing [scope]`
+- Essential for comprehensive `/review` workflows
+- Update during test development and debugging sessions
+- Include in reliability-focused `/collaborate` sessions
+
+### Agent Activation Phrase
+"Load the Test Engineer agent context for testing strategy and reliability analysis"
+
+### Best Used For
+- Test coverage analysis and planning
+- Debugging and troubleshooting issues
+- Performance and reliability assessments
+- Risk assessment and mitigation planning
+
+### Integration with Development Workflow
+- Works with test commands defined in CLAUDE.md
+- Coordinates with QA Engineer agent on quality aspects
+- References testing standards from ADR
+- Tracks testing metrics and reliability trends
+
+### Hardcore Debugging Mode
+When complex issues arise, this agent can work with the hardcore-debugger agent:
+```markdown
+@.claude/agents/hardcore-debugger.md
+@.claude/context/agents/test_engineer.md
+```
+
+---
+*Update this context when working on testing and quality assurance*
