@@ -120,38 +120,25 @@
 
 ```
 .claude/
-├── agents/                     # Specialized AI agents
-│   └── hardcore-debugger.md   # Deep debugging agent
-├── commands/                   # Command definitions  
-│   ├── analyze.md              # /analyze command
-│   ├── collaborate.md          # /collaborate command
-│   ├── feature.md              # /feature command
+├── commands/                    # Command definitions  
 │   ├── health.md               # /health command
-│   ├── review.md               # /review command
 │   ├── smart-clear.md          # /smart-clear command
-│   └── update_repo.md          # /update-repo command
+│   ├── feature.md              # /feature command
+│   ├── review.md               # /review command
+│   └── collaborate.md          # /collaborate command
 ├── context/                    # Context management
 │   ├── agents/                 # Agent context files
-│   │   ├── architect.md        # System design agent
-│   │   ├── product_engineer.md # Requirements agent
-│   │   ├── qa_engineer.md      # Quality assurance agent
-│   │   └── test_engineer.md    # Testing strategy agent
+│   │   ├── product_engineer.md
+│   │   ├── qa_engineer.md
+│   │   ├── architect.md
+│   │   └── test_engineer.md
 │   ├── health/                 # Health monitoring
-│   │   ├── assessment_template.md # Health evaluation template
-│   │   └── dashboard.md        # Current project health
-│   ├── sessions/               # Session tracking
-│   │   ├── session_template.md # Session documentation template
-│   │   └── [dated-sessions].md # Actual session files
-│   └── quick_reference.md      # This file
-├── prompts/                    # Analysis templates
-│   ├── analysis/               # Expert analysis prompts
-│   │   ├── architecture/       # System design analysis
-│   │   ├── integration/        # Integration review
-│   │   ├── product/            # Product context analysis
-│   │   ├── quality/            # Code quality review
-│   │   └── testing/            # Testing strategy analysis
-│   └── usage_guide.md          # Prompts usage guide
-└── settings.local.json         # Claude Code settings
+│   │   ├── dashboard.md
+│   │   └── assessment_template.md
+│   └── sessions/               # Session tracking
+│       ├── session_template.md
+│       └── [dated-session-files].md
+└── quick_reference.md          # This file
 
 CLAUDE.md                       # Project memory (root level)
 ```
@@ -204,35 +191,17 @@ CLAUDE.md                       # Project memory (root level)
 
 ## 🚀 Getting Started
 
-### System Status
-**Setup Date:** Current  
-**System Type:** Pure Markdown Claude Extensions  
-**Status:** ✅ Fully Operational
-
-### System Components
-- ✅ 7 Commands (analyze, collaborate, feature, health, review, smart-clear, update-repo)
-- ✅ 5 Expert Analysis Prompts (product, quality, architecture, testing, integration)
-- ✅ 4 Specialized Agents (product, qa, architect, test contexts)
-- ✅ Health monitoring system
-- ✅ Session management templates
-
 ### First Time Setup
-1. Load `@CLAUDE.md` for project context
-2. Run `/health` to establish baseline
-3. Try `/analyze quality codebase` for initial assessment
-4. Use `/feature test-feature` to test workflow
+1. Run setup script to create all files
+2. Load `@CLAUDE.md` 
+3. Run `/health` to establish baseline
+4. Try `/feature test-feature` to test workflow
 
 ### Daily Usage
 1. Start: `@CLAUDE.md`
 2. Check: `@.claude/context/health/dashboard.md`
 3. Work: Update agent contexts as needed
 4. End: `/smart-clear` before breaks
-
-### Next Steps After Setup
-- Run `/health` to establish project baseline
-- Try `/analyze product requirements` for deep analysis  
-- Use `/feature test-feature` to test development workflow
-- Practice `/smart-clear` for context management
 
 ---
 *This system provides all the power of the Python-based system using only Markdown files and Claude's native capabilities.*
